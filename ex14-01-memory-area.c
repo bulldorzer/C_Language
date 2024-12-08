@@ -1,34 +1,26 @@
-#include <stdio.h>
-#include <string.h>
+/*
+파일명: ex14-01-memory-area.c
 
-int main(void)
-{
-    char str1[50] = "Michael";
-    char str2[50] = "Michael";
-    char str3[50];
+C언어 메모리 영역
 
-    // strcat 이어 붙이기
-    strcat(str1,"Bolton")
-    strcat(str2,"Jackson")
-    // 각 문자열의 길이 체크
-    printf("str1 strcat결과: %s, str2 strcat결과: %s \n", sizeof(str1), sizeof(str2));
-    printf("str1의 입력된 문자열 길이: %d, str2의 입력된 문자열 길이: %d \n", strlen(str1), strlen(str2));
+코드 영역
+    메모리의 코드 영역은 실행프로그램 코드가 저장되는 영역
+    CPU는 코드 영역에 저장된 명령어를 하나씩 가져가 처리
 
-    // str1의 내용 전체를 str3에 복사하기(대입하기)
-    strcpy(str3, str1);
-    printf("str1을 str3에 복사 %s \n", str3);
+데이터 영역
+    전역변수와 정적(static) 변수가 저장되는 영역
+    프로그램 시작과 함께 할당되며, 프로그램 종료되면 소멸
 
-    // str1의 처음 2글자만 str2에 복사하기
-    strncpy(str2, str1, 3);
-    printf("str1을 str2에 2글자복사 %s \n", str2);
+스택(STACK) 영역
+    함수 호출과 관계되는 지역변수와 매개변수가 저장되는 영역
+    함수 호출과 함께 할당되며, 함수 호출이 완료되면 소멸한다.
 
-    // 다른위치 문자열 복사하기
-    strncpy(str2 + 3, str1 + 3, 2);
-    printf("str1을 str2에 2글자복사 %s \n", str2);
+    스택은 후입선출(LIFO, Last-In, First-Out)방식에 따라 동작
+    가장 늦게 저장된 데이터가 가장먼저 인출된다.
 
-    str1과 str2의 
-    strncpy(&str2[3], &str1[3], 2);
-    printf("비교결과: %d \n", strncmp(str1,str2,7) );
+힙 영역
+    사용자(개발자)가 직접관리할 수 있는 메모리 영역
+    힙영역은 사용자에 의해 메모리 공간이 동적으로 할당되고 해제된다.
 
-    return 0;
-}
+
+*/
