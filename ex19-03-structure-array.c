@@ -14,7 +14,8 @@ int main(void)
     struct person boy[3] = {
         {"김소년", 12},
         {"유소년", 14},
-        {"청소년", 16}};
+        {"청소년", 16}
+    };
 
     struct person girl[3];
 
